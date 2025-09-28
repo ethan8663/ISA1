@@ -9,6 +9,7 @@ class Endpoint {
     static GET_DATE = "/getDate/"
     static WRITE_FILE = "/writeFile/"
     static READ_FILE = "/readFile/"
+    static ROOT = "/"
 }
 
 

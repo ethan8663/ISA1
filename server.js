@@ -12,7 +12,10 @@ const EMPTY_CONTENT = ""
 http.createServer((req, res) => {
     const q = url.parse(req.url, true);
 
-    if(q.pathname === Endpoint.GET_DATE) {
+    if(q.pathname === Endpoint.ROOT) {
+        res.writeHead(200, {"Content-type": "text/html"})
+        res.end("<h1> welcome </h1>")
+    } else if(q.pathname === Endpoint.GET_DATE) {
         res.writeHead(200, {"Content-type": "text/html"});
         res.end(`
         <!DOCTYPE html>
